@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+	<element tag="(0008,0050)" name="ExamAccessionID"/>
+	<element tag="(0010,0010)" name="PatientNameChinese"/>
+  	<element tag="(0010,0020)" name="PatientInfo.PatientIntraID"/>
+  	<element tag="(0010,0030)" name="PatientBirtday"/>
+  	<element tag="(0010,0040)" name="PatientGender"/>
+  	<element tag="(0020,000D)" name="StudyInstanceUID"/>
+  	<element tag="(0008,0060)" name="ModalityLocation"/>
+  	<element tag="(0040,0001)" name="StationAETitle"/>
+  	<element tag="(0040,0002)" name="PreExamScheduleDate"/>
+	<element tag="(0040,0003)" name="PreExamScheduleTime"/>
+  	<element tag="(0040,0007)" name="ProcedureStepDescriptions" />
+  	<element tag="(0040,0009)" name="ProcedureStepInfo.ProcedureStepID"/>
+  	<element tag="(0010,1040)" name="PatientHomeAddress"/>
+  	<element tag="(0010,2154)" name="PatientTel"/>
+  	<element tag="(0010,1020)" name="PatientHeight"/>
+  	<element tag="(0010,1030)" name="PatientWeight"/>
+  	<element tag="(0010,2180)" name="PatientJob"/>
+  	<element tag="(0040,1001)" name="ProcedureInfo.ProcedureID"/>
+</mapping>

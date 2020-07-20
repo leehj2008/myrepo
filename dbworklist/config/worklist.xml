@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<worklist source="TEST">
+    <element tag="(0008,0050)" name="AccessionNumber" VR="CS"/>
+	<element tag="(0010,0010)" name="PatientName" VR="CS" />
+  	<element tag="(0010,0020)" name="PatientID" VR="CS" />
+  	<element tag="(0010,0030)" name="Birthday" VR="CS" />
+  	<element tag="(0010,0040)" name="Sex" VR="CS" />
+  	<element tag="(0020,000D)" name="StudyInstanceUID" VR="CS" />
+  	<sequence tag="(0040,0100)" name="SPS Sequence" VR="SQ">
+  		<selement tag="(0008,0060)" name="Modality" VR="CS"/>
+  		<selement tag="(0040,0001)" name="ScheduledStationAET" VR="CS" />
+  		<selement tag="(0040,0002)" name="SPSStartDate" VR="CS" />
+  		<selement tag="(0040,0003)" name="SPSStartTime" VR="CS" />
+  		<selement tag="(0040,0007)" name="SPSDescription" VR="CS"/>
+  		<selement tag="(0040,0009)" name="SPSID" VR="CS" />
+  		<selement tag="(0040,0020)" name="Status" VR="CS"/>
+  	</sequence>
+  	<element tag="(0010,1040)" name="PatientAddress" VR="CS" />
+  	<element tag="(0010,2154)" name="Telephone Numbers" VR="CS" />
+  	<element tag="(0010,2180)" name="Occupation" VR="CS" />
+  	<element tag="(0040,1001)" name="RequestProcID" VR="CS" />
+  	
+</worklist>

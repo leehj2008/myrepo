@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MWLNodes source="SQL" xmlns="http://med.ge.com/dragon/modalityworklist">
+	<Node AET="TERRA_NETWORK" ENCODE="GB18030" IsUseMatchKey="true">
+		<Filter>
+			<!-- FilterElement name="e:WAIT,0014" value="2"/-->
+			<!-- For date element, you can set the value to the following items: TODAY;YESTERDAY;TDBYESTERDAY;TWODAYS;ONEWEEK;ONEMONTH -->
+			<!-- You also can assign a specified date to value. For example, value="20060612" or value="20060512^20060612" for an interval-->
+			<!-- FilterElement name="e:0040,0002" value="TODAY" generate="com.ge.med.dragon.dicom.scp.config.DateGenerate"/-->
+		</Filter>
+		<Mapping>
+			<element vr="SH" tag="(0008,0050)" name="e:0008,0050" root="" generate=""/>
+			<element vr="PN" tag="(0010,0010)" name="PatientName" delimiter="^">
+				<!--component name="p:WAIT,0113" generate=""/-->
+				<component name="p:0010,0010" generate=""/>
+				<!--component name="p:WAIT,0113" generate=""/-->
+			</element>
+		  	<element vr="LO" tag="(0010,0020)" name="p:0010,0020" root="" generate=""/>
+		  	<element vr="DA" tag="(0010,0030)" name="p:0010,0030" root="" generate=""/>
+		  	<element vr="CS" tag="(0010,0040)" name="p:0010,0040" root="" generate=""/>
+		  	<element vr="UI" tag="(0020,000D)" name="e:0020,000D" root="1.2.820" generate="com.ge.med.dragon.dicom.scp.config.UIDGenerate"/>
+		  	<element vr="LO" tag="(0010,1040)" name="p:0010,1040" root="" generate=""/>
+		  	<element vr="SH" tag="(0010,2154)" name="p:0010,2154" root="" generate=""/>
+		  	<element vr="SH" tag="(0010,2180)" name="p:0010,2108" root="" generate=""/>
+		  	<element vr="SH" tag="(0040,1001)" name="pi:0040,1001" root="" generate=""/>
+		  	<sequence vr="SQ" tag="(0040,0100)" name="SPSSeq" required="true">
+		  		<element vr="DA" tag="(0040,0002)" name="e:0040,0002" root="" generate=""/>
+				<element vr="TM" tag="(0040,0003)" name="e:0040,0003" root="" generate="com.ge.med.dragon.dicom.scp.config.TimeGenerate"/>
+			  	<element vr="LO" tag="(0040,0007)" name="psi:0040,0007" root="" generate=""/>
+			  	<element vr="SH" tag="(0040,0009)" name="psi:0040,0009" root="" generate=""/>
+			  	<!-- element vr="PN" tag="(0040,0006)" name="e:WAIT,0089"/ -->
+			  	<element vr="AE" tag="(0040,0001)" name="st:0040,0001" root="" generate=""/>
+			  	<element vr="CS" tag="(0008,0060)" name="m:0008,0060" root="" generate=""/>
+		  	</sequence>
+		</Mapping>
+	</Node>
+	<Node AET="FANYIHUI" ENCODE="GB18030" IsUseMatchKey="true">
+		<Filter>
+			<!--FilterElement name="e:WAIT,0014" value="2"/-->
+			<!-- For date element, you can set the value to the following items: TODAY;YESTERDAY;TDBYESTERDAY;TWODAYS;ONEWEEK;ONEMONTH -->
+			<!-- You also can assign a specified date to value. For example, value="2006-06-12" or value="2006-05-12^2006-06-12" for an interval-->
+			<!-- FilterElement name="e:0040,0002" value="TODAY" generate="com.ge.med.dragon.dicom.scp.config.DateGenerate"/-->
+		</Filter>
+		<Mapping>
+			<element vr="SH" tag="(0008,0050)" name="e:0008,0050" root="" generate=""/>
+			<element vr="PN" tag="(0010,0010)" name="PatientName" delimiter="^">
+				<!--component name="p:WAIT,0113" generate="com.ge.med.dragon.dicom.scp.config.Katakana2RomanJ"/-->
+				<component name="p:0010,0010" generate=""/>
+				<!--component name="p:WAIT,0113" generate=""/-->
+			</element>
+		  	<element vr="LO" tag="(0010,0020)" name="p:0010,0020" root="" generate=""/>
+		  	<element vr="DA" tag="(0010,0030)" name="p:0010,0030" root="" generate=""/>
+		  	<element vr="CS" tag="(0010,0040)" name="p:0010,0040" root="" generate=""/>
+		  	<element vr="UI" tag="(0020,000D)" name="e:0020,000D" root="1.2.820" generate="com.ge.med.dragon.dicom.scp.config.UIDGenerate"/>
+		  	<element vr="LO" tag="(0010,1040)" name="p:0010,1040" root="" generate=""/>
+		  	<element vr="SH" tag="(0010,2154)" name="p:0010,2154" root="" generate=""/>
+		  	<element vr="SH" tag="(0010,2180)" name="p:0010,2108" root="" generate=""/>
+		  	<element vr="SH" tag="(0040,1001)" name="pi:0040,1001" root="" generate=""/>
+		  	<sequence vr="SQ" tag="(0040,0100)" name="SPSSeq" required="true">
+		  		<element vr="DA" tag="(0040,0002)" name="e:0040,0002" root="" generate=""/>
+				<element vr="TM" tag="(0040,0003)" name="e:0040,0003" root="" generate="com.ge.med.dragon.dicom.scp.config.TimeGenerate"/>
+			  	<element vr="LO" tag="(0040,0007)" name="psi:WAIT,0181" root="" generate=""/>
+			  	<element vr="SH" tag="(0040,0009)" name="psi:0040,0009" root="" generate=""/>
+			  	<!-- element vr="PN" tag="(0040,0006)" name="e:WAIT,0089"/ -->
+			  	<element vr="AE" tag="(0040,0001)" name="st:0040,0001" root="" generate=""/>
+			  	<element vr="CS" tag="(0008,0060)" name="m:0008,0060" root="" generate=""/>
+		  	</sequence>
+		</Mapping>
+	</Node>
+	<!-- I just put my name here, 
+		for the guys, who use the program years later, knowing me.
+		^@^ by lihaijiaing 2018.3.11 -->
+	<Node AET="BJHP_WLSCP" ENCODE="GB18030" IsUseMatchKey="true">
+		<Filter>
+			<!--FilterElement name="e:WAIT,0014" value="2"/-->
+			<!-- For date element, you can set the value to the following items: TODAY;YESTERDAY;TDBYESTERDAY;TWODAYS;ONEWEEK;ONEMONTH -->
+			<!-- You also can assign a specified date to value. For example, value="2006-06-12" or value="2006-05-12^2006-06-12" for an interval-->
+			<!-- FilterElement name="e:0040,0002" value="TODAY" generate="com.ge.med.dragon.dicom.scp.config.DateGenerate"/-->
+		</Filter>
+		<Mapping>
+			<element vr="SH" tag="(0008,0050)" name="ExamAccessionID" root="" generate=""/>
+			<element vr="PN" tag="(0010,0010)" name="PatientNameEnglish" delimiter="^">
+				<!--component name="p:WAIT,0113" generate="com.ge.med.dragon.dicom.scp.config.Katakana2RomanJ"/-->
+				<component name="PatientNameEnglish" generate=""/>
+				<!--component name="p:WAIT,0113" generate=""/-->
+			</element>
+		  	<element vr="LO" tag="(0010,0020)" name="PatientID" root="" generate=""/>
+		  	<element vr="DA" tag="(0010,0030)" name="PatientBirtday" root="" generate=""/>
+		  	<element vr="CS" tag="(0010,0040)" name="PatientGender" root="" generate=""/>
+		  	<element vr="CS" tag="(0010,1020)" name="PatientHeight" root="" generate=""/>
+		  	<element vr="CS" tag="(0010,1030)" name="PatientWeight" root="" generate=""/>
+		  	<element vr="UI" tag="(0020,000D)" name="StudyInstanceUID" root="1.2.820" generate="com.ge.med.dragon.dicom.scp.config.UIDGenerate"/>
+		  	<element vr="LO" tag="(0010,1040)" name="PatientHomeAddress" root="" generate=""/>
+		  	<element vr="SH" tag="(0010,2154)" name="PatientTel" root="" generate=""/>
+		  	<element vr="SH" tag="(0010,2180)" name="PatientNameAbstraction" root="" generate=""/>
+		  	<element vr="SH" tag="(0040,1001)" name="ProcedureStepID" root="" generate=""/>
+		  	<sequence vr="SQ" tag="(0040,0100)" name="SPSSeq" required="true">
+		  		<element vr="DA" tag="(0040,0002)" name="PreExamScheduleDate" root="" generate=""/>
+				<element vr="TM" tag="(0040,0003)" name="PreExamScheduleTime" root="" generate="com.ge.med.dragon.dicom.scp.config.TimeGenerate"/>
+			  	<element vr="LO" tag="(0040,0007)" name="ProcedureStepDescriptions" root="" generate=""/>
+			  	<element vr="SH" tag="(0040,0009)" name="ProcedureStepID" root="" generate=""/>
+			  	<!-- element vr="PN" tag="(0040,0006)" name="e:WAIT,0089"/ -->
+			  	<element vr="AE" tag="(0040,0001)" name="ModalityName" root="" generate=""/>
+			  	<element vr="CS" tag="(0008,0060)" name="ModalityLocation" root="" generate=""/>
+		  	</sequence>
+		</Mapping>
+	</Node>
+</MWLNodes>

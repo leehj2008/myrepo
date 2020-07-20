@@ -1,0 +1,10 @@
+datasource-mapping=mySQL
+url=jdbc:mysql://3.35.60.124:3306/gecris
+username=root
+password=root
+driver=com.mysql.jdbc.Driver
+select=PatientNameAbstraction,PatientNameEnglish,ExamID,PatientID,PatientNameChinese,PatientNameEnglish,PatientID,PatientGender,PatientBirtday,ExamAccessionID,PreRegisteDate,ProcedureStepDescriptions,StudyInstanceUID,PreExamScheduleDate,PatientHomeAddress,PatientTel,PreExamScheduleTime,ExamInfo.ProcedureStepID,ModalityName,ModalityLocation
+from=ExamInfo,OrderInfo,PatientInfo,ProcedureStepInfo,ProcedureInfo,ModalityInfo
+leftJoin=
+relations=ExamInfo.OrderID,OrderInfo.OrderID,PatientInfo.PatientIntraID,OrderInfo.PatientIntraID,ExamInfo.ProcedureStepID,ProcedureStepInfo.ProcedureStepID,ProcedureStepInfo.ProcedureID,ProcedureInfo.ProcedureID,ProcedureInfo.ProcedureIDType,ModalityInfo.ModalityID
+limitation=

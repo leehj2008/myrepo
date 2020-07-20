@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sex>
+	<element name="男性" code="M"/>
+	<element name="女性" code="F"/>
+	<element name="その他" code="O"></element>
+</sex>

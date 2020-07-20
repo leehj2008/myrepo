@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mpps class="com.ge.med.dragon.dicom.service.impl.MppsImpl">
+	<sequence tag="(0040,0270)" name="Scheduled Step Attribute Seq" VR="SQ">
+    	<selement tag="(0008,0050)" name="AccessionNum" VR="CS"/>
+		<selement tag="(0010,0010)" name="PatientName" VR="CS" />
+  		<selement tag="(0010,0020)" name="PatientID" VR="CS" />
+	  	<selement tag="(0010,0030)" name="Birthday" VR="CS" />
+  		<selement tag="(0010,0040)" name="Sex" VR="CS" />
+	  	<selement tag="(0020,000D)" name="STUID" VR="CS" />
+	  	<selement tag="(0040,0009)" name="SPStepID" VR="CS" />
+	  	<selement tag="(0040,1001)" name="RProcedureID" VR="CS" />
+  	</sequence>
+  	<element tag="(0008,0060)" name="Modality" VR="CS"/>
+  	<element tag="(0040,0253)" name="PPS ID" VR="CS" />
+  	<element tag="(0040,0241)" name="PStationAET" VR="CS" />
+  	<element tag="(0040,0244)" name="PPSStartDate" VR="CS" />
+  	<element tag="(0040,0245)" name="PPSStartTime" VR="CS" />
+  	<element tag="(0040,0254)" name="PPSDesc" VR="CS"/>
+  	<element tag="(0040,0252)" name="PPSStatus" VR="CS"/>
+  	<element tag="(0008,0018)" name="SOPInstanceUID" VR="CS"/>
+  	<NSet>
+	  	<update tag="(0040,0254)" name="PPSDesc" VR="CS"/>
+  		<update tag="(0040,0252)" name="PPSStatus" VR="CS"/>
+  		<update tag="(0040,0250)" name="PPSEndDate" VR="CS"/>
+  		<update tag="(0040,0251)" name="PPSEndTime" VR="CS"/>
+  	</NSet>
+</mpps>
